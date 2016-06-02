@@ -117,7 +117,7 @@ public class LibreriaContornos {
             System.out.println("Exception on the delete "+ex.getMessage());
         }
     }
-    //this method can isnt work , because the String array can be fail .
+   
     
     
 }
