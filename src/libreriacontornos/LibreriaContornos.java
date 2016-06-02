@@ -102,6 +102,11 @@ public class LibreriaContornos {
             System.out.println("Exception on the update "+ex.getMessage() );
         }
     }
+    /**
+     * This method remove , or delete all fields for a file , you introduce the primary key , and all fields asociated to primary key
+     * @param nameTable,name for the table for your database
+     * @param PrimaryKey ,,the most important value , because this is the identifier of the row 
+     */
     public void delete(String nameTable, int PrimaryKey){
          try {
             PreparedStatement st=con.prepareStatement("DELETE FROM " +nameTable+" WHERE ID="+PrimaryKey);
