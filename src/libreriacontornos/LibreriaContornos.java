@@ -57,8 +57,14 @@ public class LibreriaContornos {
             System.out.println("Exception on the insert"+ex.getMessage());
         }
     }
-    
-    
+    /**
+     * With search method you can show a determinate value 
+     * @param nameTable,name for the table for your database
+     * @param numColumns,number of columns for your table
+     * @param showDate,data to seek 
+     * @return the data you search on the variable ac
+     */
+    //this method may not work , because the String array can be fail .
     public String search(String nameTable,int numColumns, String showDate){
        String ac="";
         try {
@@ -72,7 +78,7 @@ public class LibreriaContornos {
                  ac= ac +" "+data[i];
                 
             }
-           // System.out.println(ac);
+           
               }
                    
         } catch (SQLException ex) {
