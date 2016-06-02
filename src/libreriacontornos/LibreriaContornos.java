@@ -86,7 +86,13 @@ public class LibreriaContornos {
         }
         return ac;
     }
-    
+    /**
+     * This method change a file for your database , you need introduce new values for all fields
+     * @param nameTable,name for the table for your database
+     * @param PrimaryKey,the most important value , because this is the identifier of the row 
+     * @param oldUpdate,original values of the field you want change
+     * @param newUpdate ,new values you want show
+     */
     public void update(String nameTable, String PrimaryKey,String oldUpdate,String newUpdate){
         try {
             PreparedStatement st= con.prepareStatement("UPDATE "+ nameTable+" SET "+oldUpdate+"='"+newUpdate+"' WHERE ID='"+PrimaryKey+"'");
