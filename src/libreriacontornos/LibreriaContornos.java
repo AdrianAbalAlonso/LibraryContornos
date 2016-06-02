@@ -41,7 +41,12 @@ public class LibreriaContornos {
         }
       
     }
-    
+    /**
+     * This method to allow insert in you database from netbeans , but you need write the input parameters:
+     * @param nameTable,name for the table for your database
+     * @param numColumns,number of columns for your table
+     * @param values ,values to insert in your fields
+     */
     public void Insert(String nameTable,String numColumns, String values){
         try {
             PreparedStatement st= con.prepareStatement("INSERT INTO "+nameTable+" ("+numColumns+") VALUES("+values+")");
