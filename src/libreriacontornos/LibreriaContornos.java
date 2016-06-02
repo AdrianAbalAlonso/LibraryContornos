@@ -25,7 +25,12 @@ public class LibreriaContornos {
     Statement cmd = null;
     
     
-    
+    /**
+     * When to use this method , you can connect your database with netbeans , for her you need insert on parameters :
+     * @param url ,adrees for your database
+     * @param user ,name of the propietor of the database
+     * @param pass ,password of the user
+     */
     public void Connect(String url, String user, String pass){
        
         try{
@@ -36,6 +41,7 @@ public class LibreriaContornos {
         }
       
     }
+    
     public void Insert(String nameTable,String numColumns, String values){
         try {
             PreparedStatement st= con.prepareStatement("INSERT INTO "+nameTable+" ("+numColumns+") VALUES("+values+")");
@@ -46,7 +52,8 @@ public class LibreriaContornos {
             System.out.println("Exception on the insert"+ex.getMessage());
         }
     }
-     //this method can isnt work , because the String array can be fail .
+    
+    
     public String search(String nameTable,int numColumns, String showDate){
        String ac="";
         try {
@@ -68,6 +75,7 @@ public class LibreriaContornos {
         }
         return ac;
     }
+    
     public void update(String nameTable, String PrimaryKey,String oldUpdate,String newUpdate){
         try {
             PreparedStatement st= con.prepareStatement("UPDATE "+ nameTable+" SET "+oldUpdate+"='"+newUpdate+"' WHERE ID='"+PrimaryKey+"'");
